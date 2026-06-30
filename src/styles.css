@@ -1,0 +1,79 @@
+:root {
+    --bg-dark: #0a0a0b;
+    --card-dark: #121214;
+    --accent-gold: #d4af37;
+    --text-light: #e2e8f0;
+    --border-color: #2a2a30;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.grimorio-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--accent-gold);
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: var(--card-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    background: #1a1a1e;
+    border: 1px solid var(--border-color);
+    color: white;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--accent-gold);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent-gold);
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover { opacity: 0.9; }
+.actions { display: flex; gap: 10px; }
+.hidden { display: none !important; }
+.btn-danger { background: #7f1d1d; color: #fca5a5; margin-top: 10px; }
