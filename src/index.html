@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Core - México</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Supabase JS Client JS via CDN para portabilidad inmediata -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div id="app" class="grimorio-container">
+        <header>
+            <h1>NEXUS OS OMEGA</h1>
+            <p class="subtitle">Núcleo de Operaciones Localizado (MXN)</p>
+        </header>
+
+        <main>
+            <section id="auth-section" class="card">
+                <h2>Portal de Acceso</h2>
+                <input type="email" id="email" placeholder="Correo electrónico">
+                <input type="password" id="password" placeholder="Contraseña">
+                <div class="actions">
+                    <button id="btn-login" onclick="core.login()">Transmutar Entrada</button>
+                    <button id="btn-register" onclick="core.register()">Registrar Grimorio</button>
+                </div>
+            </section>
+
+            <section id="dashboard-section" class="card hidden">
+                <h2>Panel de Control</h2>
+                <p>Bienvenido: <span id="user-display"></span></p>
+                <p>Divisa Base: <strong>MXN ($)</strong></p>
+                <button onclick="core.logout()" class="btn-danger">Cerrar Portal</button>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
